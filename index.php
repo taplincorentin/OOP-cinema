@@ -22,9 +22,10 @@
     $a4 = new Actor("Galifianakis","Zach", "M", "01-10-1969");
 
     //Movie instances
-    $m1 = new Movie("Batman", "13-09-1989", 126, $d1,$g1);
+    $m1 = new Movie("Batman", "13-09-1989", 126, $d1, $g1);
     $m2 = new Movie("Lego Batman","08-02-2017", 104, $d2,$g2);
     $m3 = new Movie("The Shining","16-10-1980", 119, $d3, $g3);
+    $m4 = new Movie("Sleepy Hollow","09-02-2000", 106, $d1, $g3);
     
     
     //Role instances
@@ -47,9 +48,9 @@
 
     echo $m1->showActors()."<br>"; //show actors who played in Batman(1989)
 
-    echo $g2->showMovies()."<br>"; //show movies of the comedy genre
+    echo $g3->showMovies()."<br>"; //show movies of the horror genre
 
-    echo $a3->showFilmography()."<br>"; //show Jack Nicholson Filmography
+    echo $a1->showFilmography()."<br>"; //show Jack Nicholson Filmography
 
     echo $d1->showMovies()."<br>"; //show Tim Burton Filmography
 ?>

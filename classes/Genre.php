@@ -35,10 +35,10 @@
 
         //show movie from this genre
         public function showMovies(){
-            $result = "";
+            $result = "movies from this genre : <br>";
 			$movies = $this->get_movies();
 			foreach($movies as $movie){
-				$result .= "movies from this genre : ".$movie->get_title()."<br>";
+				$result .= $movie->get_title()."<br>";
 			}
 			return $result;
         }
