@@ -11,6 +11,7 @@
         function __construct(string $name, string $fName,string $sex, string $bDate){
             parent::__construct( $name, $fName, $sex, $bDate);
             $this->_movies = [];
+            $this->_castings = [];
         }
 
         //get method
@@ -41,11 +42,11 @@
         }
 
         //show someone's filmography
-        public function showMovies(){
-            $result = "";
+        public function showFilmography(){
+            $result = "FILMOGRAPHY : ";
 			$movies = $this->get_movies();
 			foreach($movies as $movie){
-				$result .= "movie title : ".$movie->get_title()."<br>";
+				$result .= $movie->get_title()."<br>";
 			}
 			return $result;
         }

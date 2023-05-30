@@ -8,6 +8,7 @@
             $this->_actor = $actor;
             $this->_movie = $movie;
             $this->_role = $role;
+            $this->_actor->addMovie($movie);
             $this->_actor->addCasting($this);
             $this->_movie->addCasting($this);
             $this->_role->addCasting($this);

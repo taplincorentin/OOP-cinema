@@ -29,5 +29,18 @@
         public function __toString(){
     		return $this->get_name();
 		}
+
+        public function addCasting(Casting $casting){
+            $this->_castings []= $casting;
+        }
+
+        public function showActors(){
+            $result = "actors who played this role : <br>";
+			$castings = $this->get_castings();
+			foreach($castings as $casting){
+				$result .= $casting->get_actor()."<br>";
+			}
+			return $result;
+        }
     }
 ?>
