@@ -6,16 +6,19 @@
         private DateTime $_releaseDateFr;
         private int $_duration;
         private Director $_director;
+        private Genre $_genre;
         
         //METHODS
         
         //construct method
-        function __construct(string $title, string $releaseDateFr, int $duration, Director $director){
+        function __construct(string $title, string $releaseDateFr, int $duration, Director $director, Genre $genre){
             $this->_title = $title;
             $this->_releaseDateFr = new DateTime($releaseDateFr);
             $this->_duration = $duration;
             $this->_director = $director;
             $this->_director->addMovie($this);
+            $this->_genre = $genre;
+            $this->_genre->addMovie($this);
         }
 
         //getters
