@@ -21,5 +21,20 @@
         public function set_movies($movies){
             $this -> _movies = $movies;
         }
+        
+        //add movie method, will add in array every movie from this director
+        public function addMovie(Movie $movie){
+            $this->_movies []= $movie;
+        }
+
+        //show someone's filmography
+        public function showMovies(){
+            $result = "";
+			$movies = $this->get_movies();
+			foreach($movies as $movie){
+				$result .= "movie title : ".$movie->get_title()."<br>";
+			}
+			return $result;
+        }
     }
 ?>
