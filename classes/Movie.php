@@ -7,6 +7,7 @@
         private int $_duration;
         private Director $_director;
         private Genre $_genre;
+        private array $_castings;
         
         //METHODS
         
@@ -38,6 +39,10 @@
             return $this->_director;
         }
 
+        public function get_castings(): array {
+		    return $this->_castings;
+	    }
+
         //setters
         public function set_title($title) {
 		    $this->_title = $title;
@@ -55,9 +60,17 @@
 		    $this->_director = $director;
 	    }
 
+        public function set_castings($castings){
+            $this -> _castings = $castings;
+        }
+
         //toString method
 		public function __toString(){
     		return $this->get_title()." ".$this->get_releaseDateFr()->format("d-m-Y")." ".$this->get_duration()." ".$this->get_director();
 		}
+
+        public function addCasting(Casting $casting){
+            $this->_castings []= $casting;
+        }
     }
 ?>

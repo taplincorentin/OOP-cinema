@@ -3,6 +3,7 @@
                 
         //ATTRIBUTES
         private array $_movies;
+        private array $_castings;
 
         //METHODS
 
@@ -17,14 +18,26 @@
 		    return $this->_movies;
 	    }
 
+        public function get_castings(): array {
+		    return $this->_castings;
+	    }
+
         //set method
         public function set_movies($movies){
             $this -> _movies = $movies;
+        }
+
+        public function set_castings($castings){
+            $this -> _castings = $castings;
         }
         
         //add movie method, will add in array every movie from this director
         public function addMovie(Movie $movie){
             $this->_movies []= $movie;
+        }
+
+        public function addCasting(Casting $casting){
+            $this->_castings []= $casting;
         }
 
         //show someone's filmography
